@@ -17,12 +17,23 @@ class SplashLogoWidget extends StatelessWidget {
             right: (iconSize / 0.6) * 0.2,
             left: (iconSize / 0.6) * 0.2,
           ),
-          child: Image.asset(
-            AppAsset.icon,
-            height: iconSize,
-            width: iconSize,
-            filterQuality: FilterQuality.high,
-            // semanticLabel: '${AppLocalizations.of(context)!.appName} App Icon',
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset('assets/images/Union.png'),
+                  Text(
+                    'Montrack',
+                    style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              Text(
+                  'A budget is telling your money where to go instead of wondering where it went.')
+            ],
           ),
         ),
       ],
